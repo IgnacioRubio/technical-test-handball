@@ -1,0 +1,26 @@
+<table class="table table-striped">
+  <%# head columns %>
+  <thead>
+    <tr>
+      <th scope="col">Date Start</th>
+      <th scope="col">Local Team</th>
+      <th scope="col">Result</th>
+      <th scope="col">Visitor Team</th>
+      <th scope="col">Finish Start</th>
+    </tr>
+  </thead>
+
+  <%# content body %>
+  <tbody>
+    <% @matches.each do |match| %>
+      <tr>
+        <th><%= match.start_date.strftime('%H:%M:%S') %></th>
+        <th><%= match.local_team %></th>
+        <th><%= match.match_result %></th>
+        <th><%= match.visitor_team %></th>
+        <th><%= match.finish_date.strftime('%H:%M:%S') %></th>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
