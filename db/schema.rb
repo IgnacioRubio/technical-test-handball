@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_27_163216) do
+ActiveRecord::Schema.define(version: 2021_09_27_165206) do
 
   create_table "matches", force: :cascade do |t|
     t.string "local_team"
     t.string "visitor_team"
     t.string "match_result"
-    t.date "start_date"
-    t.date "finish_date"
+    t.datetime "start_date"
+    t.datetime "finish_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
